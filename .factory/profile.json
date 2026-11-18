@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "drafted_by": "kernel",
+  "commit": "395ec04b4c97e2e5bf63047dd96295b8c36f632f",
+  "fingerprint": "dbc3bf5c0de98cdf4b407c02a4a067767fc30e228151ad19cea3fe2416798061",
+  "protected": [
+    "*.code-workspace",
+    "*.csproj",
+    "*.fsproj",
+    "*.props",
+    "*.runsettings",
+    "*.sln",
+    "*.targets",
+    "*.vbproj",
+    ".circleci/*",
+    ".claude/*",
+    ".config/dotnet-tools.json",
+    ".cursor/*",
+    ".cursorrules",
+    ".editorconfig",
+    ".factory/*",
+    ".gitattributes",
+    ".github/*",
+    ".gitlab-ci.yml",
+    ".gitmodules",
+    ".husky/*",
+    ".idea/*",
+    ".npmrc",
+    ".vs/*",
+    ".vscode/*",
+    ".yarnrc",
+    ".yarnrc.yml",
+    "agents.md",
+    "azure-pipelines.yml",
+    "claude.md",
+    "codeowners",
+    "conftest.py",
+    "global.json",
+    "jenkinsfile",
+    "jest.config.*",
+    "makefile",
+    "nuget.config",
+    "package-lock.json",
+    "package.json",
+    "packages.config",
+    "packages.lock.json",
+    "pnpm-lock.yaml",
+    "tsconfig*.json",
+    "vitest.config.*",
+    "yarn.lock"
+  ],
+  "toolchain": {
+    "ecosystem": "node",
+    "version": "24",
+    "image": "node:24-bookworm-slim@sha256:dc26ae92c9fb15cf6b1d63e20f0944b2efe0f115b20e00be48fb23fceb061c54"
+  },
+  "commands": {
+    "setup": {
+      "argv": [
+        "npm",
+        "ci"
+      ],
+      "source": "manifest:package-lock.json"
+    },
+    "build": null,
+    "test": {
+      "argv": [
+        "npm",
+        "test",
+        "--",
+        "--reporter=json",
+        "--outputFile=/results/r.json"
+      ],
+      "source": "manifest:package.json"
+    },
+    "format": "human",
+    "lint": "human",
+    "typecheck": "human"
+  },
+  "env": {
+    "CI": "true",
+    "npm_config_update_notifier": "false",
+    "npm_config_cache": "/home/f/.npm"
+  },
+  "test_patterns": [
+    "**/*.test.*",
+    "**/*.spec.*",
+    "test/**",
+    "tests/**",
+    "__tests__/**",
+    "test/**/*.js"
+  ],
+  "results": {
+    "format": "vitest",
+    "dir": "/results"
+  },
+  "registries": [
+    "registry.npmjs.org"
+  ],
+  "services": []
+}

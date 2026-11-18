@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=24" },
-  "scripts": { "test": "vitest run" },
-  "devDependencies": { "vitest": "5.1.1" }
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "5.1.1",
+    "factory-nonexistent-pkg-zz9": "1.0.0"
+  }
 }

@@ -4,6 +4,6 @@
   "private": true,
   "type": "module",
   "engines": { "node": ">=24" },
-  "scripts": { "test": "vitest run" },
+  "scripts": { "test": "vitest run", "build": "node build.mjs" },
   "devDependencies": { "vitest": "5.1.1" }
 }

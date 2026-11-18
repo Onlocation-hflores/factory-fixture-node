@@ -88,7 +88,8 @@
     "test/**",
     "tests/**",
     "__tests__/**",
-    "test/**/*.js"
+    "test/**/*.js",
+    "spec/**/*.js"
   ],
   "results": {
     "format": "vitest",
